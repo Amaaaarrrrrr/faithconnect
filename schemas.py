@@ -18,7 +18,7 @@ class PostSchema(ma.SQLAlchemyAutoSchema):
 
     title = fields.String(required=True, validate=validate.Length(min=1))
     content = fields.String(required=True, validate=validate.Length(min=1))
-    type = fields.String(required=True, validate=validate.OneOf(["sermon", "devotion", "testimony"]), missing="devotion")
+    type = fields.String(required=True, validate=validate.OneOf(["sermon", "devotion", "testimony"]))
     likes = fields.Integer(dump_only=True)
     timestamp = fields.DateTime(dump_only=True)
 

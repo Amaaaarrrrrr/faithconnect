@@ -4,7 +4,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from models import db, User, Post, PrayerRequest, Comment
 from schemas import PostSchema, PrayerSchema, UserSchema, CommentSchema
 
-api_bp = Blueprint('api', _name_)
+api_bp = Blueprint('api', __name__)
 api = Api(api_bp)
 
 post_schema = PostSchema()
